@@ -57,31 +57,7 @@ This project implements a large-scale enterprise network consisting of **four di
 
 The network is organized into **four routing domains** connected through **three redistribution border routers**, with **19 routers**, **11 switches**, **3 servers**, and **20+ end devices**.
 
-```
-                          NETWORK TOPOLOGY
-
-  OSPF AREA 1                    EIGRP AS 5
-  +----------------------+    +-----------------------------------+
-  |                      |    |                                   |
-  |  R4--R1--R0--R2 -----+--->+-- R3--R5--R6--R9--R8              |
-  |  |   |         \     |    |              |       |             |
-  |  A  B,C      (R1-R2) |    |              R7      |             |
-  |                      |    |              |       |             |
-  |  [Server0: DNS/      |    |              D     E, F           |
-  |   Mail/Web]          |    |                                   |
-  +----------------------+    +---------------+-------------------+
-                                              |
-  RIP v2                       OSPF AREA 2    |
-  +----------------------+    +--------------+--------------------+
-  |                      |    |                                   |
-  |  R16--R15--R14--R18--+--->+-- R10--R11--R12                   |
-  |   |    |    |        |    |         |                         |
-  |   K   R17   |        |    |        R13      G                 |
-  |       |   (loop)     |    |        | |                        |
-  |       J              |    |        H  I                       |
-  |                      |    |  [Server1: DHCP]                  |
-  +----------------------+    +-----------------------------------+
-```
+![Network Topology - Cisco Packet Tracer](topology.png)
 
 ### Redistribution Points
 
